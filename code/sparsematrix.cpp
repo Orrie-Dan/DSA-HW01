@@ -45,7 +45,7 @@ public:
             throw std::invalid_argument("Input file is missing column information: " + filepath);
         }
         if (line.substr(0, 5) != "cols=") {
-            throw std::invalid_argument("Input file has wrong format, expected 'cols=' but got: " + line);
+            throw std::invalid_argument("Input file has wrong format" + line);
         }
         cols = std::stoi(line.substr(5)) + 1;  // Added 1 to cols to handle error i was getting
 
@@ -106,7 +106,7 @@ public:
         }
     }
 
-    // Get element at specified position
+    // Get element at specifed position
     int getElement(int row, int col) const {
         if (row < 0 || row >= rows || col < 0 || col >= cols) {
             throw std::out_of_range("Invalid index (" + std::to_string(row) + "," + 
@@ -171,7 +171,7 @@ public:
         std::cout << "Performing matrix subtraction of size " << rows << "x" << cols << std::endl;
         
         SparseMatrix result(rows, cols);
-        // Process elements from first matrix
+        // Process elements from 1st matrix
         for (const auto& entry : elements) {
             int row = entry.first.first;
             int col = entry.first.second;
@@ -259,7 +259,7 @@ public:
 
 int main() {
     
-    std::string base_path = "C:/Users/user/DSA-HW01/sample_inputs/";  // Default to current directory
+    std::string base_path = "C:/Users/user/DSA-HW01/sample_inputs/";  
     
     std::cout << "Sparse Matrix Operation Menu\n";
     std::cout << "1. Addition\n";
