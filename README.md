@@ -11,7 +11,6 @@ The program processes the matrices and allows you to specify an output directory
 steps:
 1. Clone repository: 
 2. Navigate directory
-3. compile (g++ sparsematrix.cpp -o sparsematrix)
-4. Run (.\sparsematrix)
-5. Select an operation (Addition, Subtraction, or Multiplication)
-6. Provide input file paths for the matrices
+3. Run (python sparsematrix.py)
+4. Select an operation (Addition, Subtraction, or Multiplication)
+5. Provide input file paths for the matrices
